@@ -13,7 +13,9 @@ htmlcov/
 .env.*
 *.log
 
-docs/
+docs/*
+!docs/
+!docs/COMMAND_REFERENCE.md
 METHODOLOGY.md
 task_completion.ods
 

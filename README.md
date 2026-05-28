@@ -31,12 +31,11 @@ The runtime loop performs these steps:
 | `arm_pybullet.py` | PyBullet 3D digital twin based on the bundled Franka Panda model. |
 | `logger.py` | Non-blocking CSV logger for frame-level runtime metrics. |
 | `scripts/analyze_evaluation_logs.py` | Analysis script that converts runtime CSV logs into LaTeX tables. |
+| `gesture_recognizer.task` | MediaPipe gesture recognizer model bundle used by the runtime. |
 | `data/raw_logs/` | Default location for physical evaluation CSV logs. |
 | `results/evaluation_tables.tex` | Generated LaTeX tables for the Results chapter. |
 | `docs/COMMAND_REFERENCE.md` | Gesture mappings, runtime controls, CLI options, and terminal output reference. |
-| `docs/EVALUATION_ANALYSIS.md` | Detailed documentation for the log-analysis workflow. |
-| `docs/EVALUATION_TEST_PLAN.md` | Evaluation-phase test protocol and required manual measurements. |
-| `METHODOLOGY.md` | Methodology narrative for the project report. |
+| `.gitignore` | Keeps local environments, caches, report drafts, and non-repository files out of Git. |
 
 ## Requirements
 
@@ -199,8 +198,3 @@ required packages were installed into that environment.
 - Use `README.md` for setup and day-to-day operation.
 - Use `docs/COMMAND_REFERENCE.md` when checking gestures, modes, CLI flags, or
   terminal messages.
-- Use `docs/EVALUATION_TEST_PLAN.md` to decide which evaluation runs and task
-  trials to perform.
-- Use `docs/EVALUATION_ANALYSIS.md` when processing CSV logs for the report.
-- Use `METHODOLOGY.md` as the report-facing explanation of the design and
-  implementation choices.
