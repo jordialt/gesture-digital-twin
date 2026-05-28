@@ -1,0 +1,102 @@
+\begin{table}[htbp]
+\centering
+\caption{Runtime performance metrics by physical evaluation case.}
+\label{tab:runtime-performance}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Case & Runs & Frames & Average FPS & Minimum FPS & Maximum FPS & Average Latency (ms) & Minimum Latency (ms) & Maximum Latency (ms) \\
+\midrule
+Baseline 2D & 1 & 951 & 15.20 & 1.34 & 25.39 & 16.07 & 11.10 & 26.88 \\
+Baseline No Sim & 1 & 1302 & 20.04 & 1.19 & 21.19 & 15.16 & 11.11 & 28.11 \\
+Baseline Panda 3D & 1 & 1551 & 23.17 & 1.06 & 31.63 & 20.73 & 11.23 & 36.08 \\
+Command Recognition & 1 & 3330 & 28.13 & 1.48 & 32.53 & 20.08 & 11.33 & 44.08 \\
+Debounce 3 & 1 & 860 & 29.28 & 1.48 & 32.31 & 17.61 & 11.23 & 35.72 \\
+Debounce 5 & 1 & 1037 & 29.89 & 1.52 & 31.86 & 15.90 & 11.37 & 36.69 \\
+Hold Behavior & 1 & 2603 & 30.10 & 1.51 & 32.75 & 14.60 & 11.24 & 33.77 \\
+Mode Routing & 1 & 1002 & 28.68 & 1.49 & 30.74 & 17.18 & 11.10 & 38.13 \\
+Task Trials & 1 & 11691 & 20.98 & 1.19 & 27.19 & 17.46 & 11.07 & 55.91 \\
+Overall & 9 & 24327 & 23.79 & 1.06 & 32.75 & 17.47 & 11.07 & 55.91 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Recognized command counts by evaluation case and control mode.}
+\label{tab:recognized-commands-by-mode}
+\begin{tabular}{lllr}
+\toprule
+Case & Mode & Recognized Command & Count \\
+\midrule
+Baseline 2D & Mode 1: X-Z Plane & STEP\_X\_POS & 17 \\
+Baseline 2D & Mode 1: X-Z Plane & Total & 17 \\
+Baseline No Sim & Mode 1: X-Z Plane & STEP\_X\_POS & 19 \\
+Baseline No Sim & Mode 1: X-Z Plane & Total & 19 \\
+Baseline Panda 3D & Mode 1: X-Z Plane & STEP\_X\_POS & 23 \\
+Baseline Panda 3D & Mode 1: X-Z Plane & Total & 23 \\
+Command Recognition & Mode 1: X-Z Plane & HOME & 2 \\
+Command Recognition & Mode 1: X-Z Plane & STEP\_X\_NEG & 2 \\
+Command Recognition & Mode 1: X-Z Plane & STEP\_X\_POS & 4 \\
+Command Recognition & Mode 1: X-Z Plane & STEP\_Z\_NEG & 2 \\
+Command Recognition & Mode 1: X-Z Plane & STEP\_Z\_POS & 2 \\
+Command Recognition & Mode 1: X-Z Plane & TOGGLE\_MODE & 1 \\
+Command Recognition & Mode 1: X-Z Plane & Total & 13 \\
+Command Recognition & Mode 2: Y-Yaw Plane & HOME & 1 \\
+Command Recognition & Mode 2: Y-Yaw Plane & STEP\_X\_NEG & 1 \\
+Command Recognition & Mode 2: Y-Yaw Plane & STEP\_X\_POS & 1 \\
+Command Recognition & Mode 2: Y-Yaw Plane & STEP\_Z\_POS & 1 \\
+Command Recognition & Mode 2: Y-Yaw Plane & TOGGLE\_MODE & 2 \\
+Command Recognition & Mode 2: Y-Yaw Plane & Total & 6 \\
+Debounce 3 & Mode 1: X-Z Plane & HOME & 1 \\
+Debounce 3 & Mode 1: X-Z Plane & STEP\_X\_NEG & 1 \\
+Debounce 3 & Mode 1: X-Z Plane & STEP\_X\_POS & 1 \\
+Debounce 3 & Mode 1: X-Z Plane & STEP\_Z\_NEG & 1 \\
+Debounce 3 & Mode 1: X-Z Plane & STEP\_Z\_POS & 1 \\
+Debounce 3 & Mode 1: X-Z Plane & Total & 5 \\
+Debounce 3 & Mode 2: Y-Yaw Plane & STEP\_X\_NEG & 1 \\
+Debounce 3 & Mode 2: Y-Yaw Plane & STEP\_Z\_POS & 1 \\
+Debounce 3 & Mode 2: Y-Yaw Plane & TOGGLE\_MODE & 1 \\
+Debounce 3 & Mode 2: Y-Yaw Plane & Total & 3 \\
+Debounce 5 & Mode 1: X-Z Plane & HOME & 1 \\
+Debounce 5 & Mode 1: X-Z Plane & STEP\_X\_NEG & 1 \\
+Debounce 5 & Mode 1: X-Z Plane & STEP\_X\_POS & 1 \\
+Debounce 5 & Mode 1: X-Z Plane & STEP\_Z\_NEG & 1 \\
+Debounce 5 & Mode 1: X-Z Plane & STEP\_Z\_POS & 1 \\
+Debounce 5 & Mode 1: X-Z Plane & Total & 5 \\
+Debounce 5 & Mode 2: Y-Yaw Plane & STEP\_X\_NEG & 1 \\
+Debounce 5 & Mode 2: Y-Yaw Plane & STEP\_Z\_POS & 1 \\
+Debounce 5 & Mode 2: Y-Yaw Plane & TOGGLE\_MODE & 1 \\
+Debounce 5 & Mode 2: Y-Yaw Plane & Total & 3 \\
+Hold Behavior & Mode 1: X-Z Plane & STEP\_X\_NEG & 3 \\
+Hold Behavior & Mode 1: X-Z Plane & STEP\_X\_POS & 6 \\
+Hold Behavior & Mode 1: X-Z Plane & STEP\_Z\_NEG & 8 \\
+Hold Behavior & Mode 1: X-Z Plane & STEP\_Z\_POS & 5 \\
+Hold Behavior & Mode 1: X-Z Plane & Total & 22 \\
+Mode Routing & Mode 1: X-Z Plane & STEP\_X\_NEG & 1 \\
+Mode Routing & Mode 1: X-Z Plane & STEP\_X\_POS & 1 \\
+Mode Routing & Mode 1: X-Z Plane & STEP\_Z\_NEG & 1 \\
+Mode Routing & Mode 1: X-Z Plane & STEP\_Z\_POS & 1 \\
+Mode Routing & Mode 1: X-Z Plane & Total & 4 \\
+Mode Routing & Mode 2: Y-Yaw Plane & STEP\_X\_NEG & 1 \\
+Mode Routing & Mode 2: Y-Yaw Plane & STEP\_X\_POS & 1 \\
+Mode Routing & Mode 2: Y-Yaw Plane & STEP\_Z\_NEG & 1 \\
+Mode Routing & Mode 2: Y-Yaw Plane & STEP\_Z\_POS & 1 \\
+Mode Routing & Mode 2: Y-Yaw Plane & TOGGLE\_MODE & 1 \\
+Mode Routing & Mode 2: Y-Yaw Plane & Total & 5 \\
+Task Trials & Mode 1: X-Z Plane & HOME & 14 \\
+Task Trials & Mode 1: X-Z Plane & STEP\_X\_NEG & 6 \\
+Task Trials & Mode 1: X-Z Plane & STEP\_X\_POS & 8 \\
+Task Trials & Mode 1: X-Z Plane & STEP\_Z\_NEG & 8 \\
+Task Trials & Mode 1: X-Z Plane & STEP\_Z\_POS & 17 \\
+Task Trials & Mode 1: X-Z Plane & TOGGLE\_MODE & 11 \\
+Task Trials & Mode 1: X-Z Plane & Total & 64 \\
+Task Trials & Mode 2: Y-Yaw Plane & HOME & 5 \\
+Task Trials & Mode 2: Y-Yaw Plane & STEP\_X\_NEG & 7 \\
+Task Trials & Mode 2: Y-Yaw Plane & STEP\_X\_POS & 6 \\
+Task Trials & Mode 2: Y-Yaw Plane & STEP\_Z\_NEG & 6 \\
+Task Trials & Mode 2: Y-Yaw Plane & STEP\_Z\_POS & 8 \\
+Task Trials & Mode 2: Y-Yaw Plane & TOGGLE\_MODE & 9 \\
+Task Trials & Mode 2: Y-Yaw Plane & Total & 41 \\
+\bottomrule
+\end{tabular}
+\end{table}
